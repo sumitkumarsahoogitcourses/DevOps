@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: backend-flask
+  client:
+    build:
+      context: ./frontend/frontend-app
+      dockerfile: Dockerfile
+    image: frontend-react
+    ports:
+      - "7000:7000"
